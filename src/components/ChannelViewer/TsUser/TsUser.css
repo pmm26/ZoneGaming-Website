@@ -1,0 +1,29 @@
+.TsUser {
+    background-color: aliceblue;
+    display: inline;
+    margin: 50px;
+}
+
+
+.Demote {
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    display: inline;
+    margin: 25px;
+}
+
+.Promote {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    display: inline;
+    margin: 25px;
+}
+
+.Image {
+    height: 25px;
+    width: 25px;
+    display: inline;
+
+}

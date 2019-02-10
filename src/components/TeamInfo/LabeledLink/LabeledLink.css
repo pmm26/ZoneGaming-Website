@@ -1,0 +1,12 @@
+.LabeledLink {
+    margin: 20px;
+}
+
+.Label {
+    display: inline; 
+    margin-right: 20px;
+}
+
+.Value {
+    display: inline; 
+}
