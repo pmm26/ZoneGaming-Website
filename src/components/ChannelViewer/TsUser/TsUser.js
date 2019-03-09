@@ -8,7 +8,7 @@ const Button = (props) => {
     
     
     return (
-           <div className={props.classNamed} clicked={() => props.Promote} >{props.children}</div>
+        <div className={props.classNamed} onClick={() => props.action(props.memberId)}>{props.children}</div>
     );
 
 }
@@ -30,14 +30,15 @@ const ts3User = (props) => {
         default:
             break;
     }
-    
+    // console.log(props)
 
     return (
         <div>    
            <p className={classes.TsUser}>{props.children}</p>
            <img className={classes.Image} src="https://www.wonderplugin.com/videos/demo-image0.jpg" alt="Permission"/>
-           <Button classNamed={classes.Promote}>Promote</Button>
-           <Button classNamed={classes.Demote}>Demote</Button>
+
+            <Button memberId={props.memberId} classNamed={classes.Promote} action={props.promote}>Promote</Button>
+            <Button memberId={props.memberId} classNamed={classes.Demote} action={props.demote}>Demote</Button>
            
            {/* <div className={classes.Promote} clicked={() => props.Promote} >Promote</div> */}
            

@@ -11,14 +11,15 @@ import Aux from '../../hoc/Aux/Aux'
 const channelViewer = (props) => {
 
 
-    console.log(props)
+    // console.log(props)
 
     let generateUsers = (channel) => {
 
         return channel.clients.map(client => {
             // console.log(client);
             return (
-                <TsUser key={client.clid}>{client.po}</TsUser>
+                <TsUser key={client._id} memberId={client._id} promote={props.promote}
+                        demote={props.demote}>{client.client_nickname}</TsUser>
             );
         });
     }
