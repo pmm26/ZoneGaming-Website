@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 import Layout from './hoc/Layout/Layout';
-import ChannelManager from './containers/ChannelManager/ChannelManager';
+import Page from './containers/Page/Page';
+import {BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Layout>
-          <ChannelManager></ChannelManager>
-        </Layout>
+          <BrowserRouter>
+              <Layout>
+                  <Page/>
+              </Layout>
+          </BrowserRouter>
       </div>
     );
   }

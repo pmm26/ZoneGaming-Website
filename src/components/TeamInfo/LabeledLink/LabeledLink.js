@@ -5,9 +5,8 @@ import classes from './LabeledLink.css'
 
 const labeledLink = (props) => {
     return (
-        <div className={classes.LabeledLink}>    
-            <p className={classes.Label}>{props.name}: </p>
-            <p className={classes.Value}>{props.children}</p>
+        <div className={classes.LabeledLink}>
+            <div className={classes.Value} onClick={props.action}>{props.children}</div>
         </div>
     );
 

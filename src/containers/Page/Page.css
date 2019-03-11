@@ -1,0 +1,34 @@
+
+.Page ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+.Page li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.Page a {
+    text-decoration: none;
+    color: black;
+}
+
+.Page a:hover,
+.Page a:active,
+.Page a.active {
+    color: #fa923f;
+}
+
+.PageSize {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.PageContent {
+    margin-top: 100px;
+}

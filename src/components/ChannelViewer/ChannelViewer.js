@@ -3,10 +3,6 @@ import TsSala from './TsSala/TsSala';
 import TsUser from './TsUser/TsUser';
 import Aux from '../../hoc/Aux/Aux'
 
-// import classes from './Burger.css';
-
-
-
 
 const channelViewer = (props) => {
 
@@ -15,11 +11,13 @@ const channelViewer = (props) => {
 
     let generateUsers = (channel) => {
 
+
         return channel.clients.map(client => {
-            // console.log(client);
             return (
-                <TsUser key={client._id} memberId={client._id} promote={props.promote}
-                        demote={props.demote}>{client.client_nickname}</TsUser>
+
+                <TsUser key={client.clid} permission={props.permission} memberId={client._id}
+                        loginMemberId={props.loginMemberId} promote={props.promote}
+                        demote={props.demote} client={client}>{client.client_nickname}</TsUser>
             );
         });
     }
@@ -28,8 +26,8 @@ const channelViewer = (props) => {
         return props.channels.map(channel => {
             return (
                 <Aux key={channel.cid}>
-                
-                    <TsSala key={channel.cid} channel={channel}>{channel.channel_name}</TsSala>
+
+                    <TsSala channel={channel}>{channel.channel_name}</TsSala>
                     {generateUsers(channel)}
                 </Aux>
                 
